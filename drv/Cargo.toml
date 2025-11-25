@@ -1,0 +1,18 @@
+[package]
+name = "mdrv"
+version = "0.1.0"
+edition = "2024"
+build = "src/build.rs"
+
+[lib]
+path = "src/drv.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+common = { path = "../common" }
+
+[dev-dependencies]
+cargo-make = "0.37.24"
+
+[build-dependencies]
+winreg = "0.55.0"
