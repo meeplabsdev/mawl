@@ -1,0 +1,11 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/common.rs"
+
+[dependencies]
+widestring = { version = "1.2.1", default-features = false, features = ["alloc"] }
+pastey = "0.2.0"
