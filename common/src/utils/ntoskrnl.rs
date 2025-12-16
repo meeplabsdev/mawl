@@ -12,7 +12,7 @@ use crate::{
         ExAllocatePool, ExFreePool, MmAllocateContiguousMemorySpecifyCacheNode,
         MmFreeContiguousMemory,
     },
-    types::{
+    types_old::{
         enums::MEMORY_CACHING_TYPE::MmCached,
         types::{BYTE, P_BYTE, P_VOID, PHYSICAL_ADDRESS, SIZE_T},
     },

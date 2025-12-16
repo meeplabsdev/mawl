@@ -29,6 +29,11 @@ macro_rules! STRUCT {
                 unsafe { core::mem::zeroed() }
             }
         }
+
+        pastey::paste! {
+            pub type [<P_ $name>] = *mut $name;
+            pub type [<PC_ $name>] = *const $name;
+        }
     };
 }
 
@@ -43,6 +48,28 @@ macro_rules! UNION {
         #[derive(Clone, Copy)]
         pub union $name {
             $(pub $field: $typ),*
+        }
+
+        pastey::paste! {
+            pub type [<P_ $name>] = *mut $name;
+            pub type [<PC_ $name>] = *const $name;
+        }
+    };
+}
+
+#[macro_export]
+macro_rules! ENUM {
+    (
+        $name:ident {
+            $($field:ident $(= $value:expr)?),* $(,)?
+        }
+    ) => {
+        #[repr(i32)]
+        #[derive(Clone, Copy)]
+        pub enum $name {
+            $(
+                $field $(= $value)?
+            ),*
         }
     };
 }

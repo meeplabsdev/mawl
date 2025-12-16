@@ -1,5 +1,5 @@
 #![allow(nonstandard_style)]
-use crate::types::{
+use crate::types_old::{
     enums::MEMORY_CACHING_TYPE,
     types::{NODE_REQUIREMENT, P_VOID, PC_CHAR, PHYSICAL_ADDRESS, POOL_TYPE, SIZE_T, ULONG, VOID},
 };

@@ -2,7 +2,7 @@ extern crate alloc;
 use alloc::string::String as _String;
 use alloc::vec::Vec;
 
-use crate::types::types::{P_WCHAR, PC_WCHAR, UNICODE_STRING, USHORT, WCHAR};
+use crate::types_old::types::{P_WCHAR, PC_WCHAR, UNICODE_STRING, USHORT, WCHAR};
 
 pub struct String(_String);
 
